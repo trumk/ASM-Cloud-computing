@@ -1,8 +1,79 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+.card {
+  width: 300px;
+  background-color: #ba86da;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+.container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS to style the image */
+.img-container {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Optional: If you want to add some spacing between the columns */
+.col {
+  margin-bottom: 20px;
 }
