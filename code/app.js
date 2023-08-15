@@ -13,7 +13,7 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 
 var mongoose = require('mongoose')
-var db = "mongodb+srv://nguyentrungtest2292003:eBR8e3lLUXFtpNTi@cluster0.djedfbj.mongodb.net/gch1103"
+var db = "mongodb+srv://nguyentrungtest2292003:mqjeZSfebuMCt3C3@cluster0.6cjjwvc.mongodb.net/toyshop"
 
 mongoose.connect(db)
 .then(()=>console.log('SUCCEED'))
