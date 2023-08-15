@@ -22,8 +22,25 @@ router.get("/deleteall", async (req, res) => {
   res.redirect("/toy/lego");
 });
 
-router.get("/add", (req, res) => {
-  res.render("student/studentAdd");
+router.get("/edit/:id", async (req, res) => {
+  var id = req.params.id;
+  var lego = await LegoModel.findById(id);
+  res.render("toy/lego/edit", { lego: lego });
+});
+
+router.post("/edit/:id", async (req, res) => {
+  var id = req.params.id;
+  var updatedLego = req.body;
+
+  var originalLego = await LegoModel.findById(id);
+
+  Object.keys(updatedLego).forEach((key) => {
+      if (updatedLego[key] !== "" && updatedLego[key] !== undefined) {
+        originalLego[key] = updatedLego[key];
+      }
+  });
+  await originalLego.save();
+  res.redirect("/toy/lego");
 });
 
 
