@@ -9,6 +9,16 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+
+var mongoose = require('mongoose')
+var db = "mongodb+srv://nguyentrungtest2292003:eBR8e3lLUXFtpNTi@cluster0.djedfbj.mongodb.net/gch1103"
+
+mongoose.connect(db)
+.then(()=>console.log('SUCCEED'))
+.catch((err)=>console.log('FAILED'))
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
