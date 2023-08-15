@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-var ToySchema = mongoose.Schema({
+var LegoSchema = mongoose.Schema({
     brandName: String,
     modelName: String,
     description: String,
@@ -9,6 +9,6 @@ var ToySchema = mongoose.Schema({
     quantity : Number
 })
 
-const ToyModel = mongoose.model("lego", ToySchema, "lego")
+const LegoModel = mongoose.model("lego", LegoSchema, "lego")
 
-module.exports = ToyModel
+module.exports = LegoModel
