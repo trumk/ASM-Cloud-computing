@@ -12,9 +12,9 @@ router.get("/add", (req, res) => {
 });
 
 router.post("/add", async (req, res) => {
-  var lego = req.body;
+  var car = req.body;
 
-  await CarModel.create(lego);
+  await CarModel.create(car);
   res.redirect("/toy/car");
 });
 
@@ -30,6 +30,27 @@ router.get("/deleteall", async (req, res) => {
   await CarModel.deleteMany()
     .then(() => console.log("Delete successfully"))
     .catch((error) => console.log("Delete failed"));
+  res.redirect("/toy/car");
+});
+
+router.get("/edit/:id", async (req, res) => {
+  var id = req.params.id;
+  var car = await CarModel.findById(id);
+  res.render("toy/car/edit", { car: car });
+});
+
+router.post("/edit/:id", async (req, res) => {
+  var id = req.params.id;
+  var updatedCar = req.body;
+
+  var originalCar = await CarModel.findById(id);
+
+  Object.keys(updatedCar).forEach((key) => {
+    if (updatedCar[key] !== "" && updatedCar[key] !== undefined) {
+        originalCar[key] = updatedCar[key];
+    }
+  });
+  await originalCar.save();
   res.redirect("/toy/car");
 });
 

@@ -1,0 +1,33 @@
+<a class="btn btn-primary mt-3" href="/toy/car">Back</a>
+    <div class="container col-md-8 mt-3 mb-3">
+        <form action="/toy/car/edit/{{ car._id }}" method="post">
+            <h1 class="text text-danger">Edit Product</h1>
+            <div class="form-group">
+                <label class="h4 text text-success">Brand name</label>
+                <input class="form-control" type="text" name="brandName" value="{{ car.brandName }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Model name</label>
+                <input class="form-control" type="text" name="modelName" value="{{ car.modelName }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Description</label>
+                <input class="form-control" type="text" name="description" value="{{ car.description }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Price</label>
+                <input class="form-control" type="text" name="price" value="{{ car.price }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Quantity</label>
+                <input class="form-control" type="text" name="quantity" value="{{ car.quantity }}">
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Image url</label>
+                <input class="form-control" type="text" name="image" value="{{ car.image }}">
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Edit">
+            </div>
+        </form> 
+    </div>
