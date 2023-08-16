@@ -1,0 +1,38 @@
+<div class="container mt-3 mb-3">
+  <h1>Car List</h1>
+  <a href="/toy/car/add" class="btn btn-success">Add</a>
+  <a
+    onclick="return confirm('Are you sure you want to delete all')"
+    href="/toy/lego//deleteall"
+    class="btn btn-danger"
+  >Delete all</a>
+  <table border="1">
+    <tr>
+      <th colspan="7">Car List</th>
+    </tr>
+    <tr>
+      <th>Image</th>
+      <th>Brand Name</th>
+      <th>Model Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Menu</th>
+    </tr>
+    {{#each car}}
+      <tr>
+        <th><img src="{{ image }}" width="100" height="150"></th>
+        <th>{{brandName}}</th>
+        <th>{{modelName}}</th>
+        <th>{{description}}</th>
+        <th>${{price}}</th>
+        <th>{{ quantity }}</th>
+        <th>
+            <a href="/toy/car/edit/{{ _id }}" class="btn btn-warning">Edit</a> 
+            <a href="/toy/car//delete/{{ _id }}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
+        </th>
+      </tr>
+    {{/each}}
+
+  </table>
+</div>
