@@ -35,14 +35,23 @@ router.post("/edit/:id", async (req, res) => {
   var originalLego = await LegoModel.findById(id);
 
   Object.keys(updatedLego).forEach((key) => {
-      if (updatedLego[key] !== "" && updatedLego[key] !== undefined) {
-        originalLego[key] = updatedLego[key];
-      }
+    if (updatedLego[key] !== "" && updatedLego[key] !== undefined) {
+      originalLego[key] = updatedLego[key];
+    }
   });
   await originalLego.save();
   res.redirect("/toy/lego");
 });
 
+router.get("/add", (req, res) => {
+  res.render("toy/lego/add");
+});
 
+router.post("/add", async (req, res) => {
+  var lego = req.body;
+
+  await LegoModel.create(lego);
+  res.redirect("/toy/lego");
+});
 
 module.exports = router;
