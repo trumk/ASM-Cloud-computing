@@ -20,4 +20,20 @@ body {
     padding: 10px;
     color: white;
     text-decoration: none;
+    border: 1px solid #000000; 
+    border-radius: 5px; 
+  }
+
+  body > div.sidebar > a{
+    font-size: 25px;
+  }
+  body > div.sidebar > a:hover{
+    background-color: aqua;
+  }
+  body > div.sidebar > img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-left: 30px;
   }

@@ -1,0 +1,120 @@
+<head>
+    <link href="/stylesheets/ui.css" rel="stylesheet">
+</head>
+
+<section class="section-intro padding-y-sm">
+    <div class="container">
+        <div class="intro-banner-wrap">
+            <img src="https://cdn2.f-cdn.com/contestentries/1678827/41262592/5de137d57a471_thumb900.jpg" class="img-fluid rounded">
+        </div>
+    </div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+<!-- ========================= SECTION FEATURE ========================= -->
+<section class="section-content padding-y-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-body">
+                    <span class="text-primary"><i class="fa fa-2x fa-truck"></i></span>
+                    <h5 class="title">Fast delivery</h5>
+                    <p>In the competitive world of logistics, fast delivery is often seen as a key differentiator between successful and unsuccessful companies.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-body">
+                    <span class="text-primary"><i class="fa fa-2x fa-landmark"></i></span>
+                    <h5 class="title">Creative Strategy</h5>
+                    <p>Creative strategy involves developing innovative and unique ideas to capture the attention of the target audience and stand out from the competition.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-body">
+                    <span class="text-primary"><i class="fa fa-2x fa-lock"></i></span>
+                    <h5 class="title">High secured</h5>
+                    <p>Our online payment system is highly secured, utilizing the latest encryption technology to protect sensitive information from potential hackers or cyber threats.</p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- container .//  -->
+</section>
+
+<!-- ========================= SECTION FEATURE END// ========================= -->
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content">
+    <div class="container">
+        <header class="section-heading">
+            <h3 class="section-title">Popular products</h3>
+        </header><!-- sect-heading -->
+
+        <div class="row">
+            {{#each lego }}
+                <div class="card card-product-grid">
+                    <a href="/customer/detail/{{ _id }}" class="img-wrap"> <img src="{{ image }}" width="30px"> </a>
+                    <figcaption class="info-wrap">
+                        <a href="#" class="title">{{ modelName }}</a>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: ${{ price }}</li>
+                        </ul>
+                    </figcaption>
+                </div>
+            {{/each}}
+             {{#each car }}
+                <div class="card card-product-grid">
+                    <a href="/customer/detail/{{ _id }}" class="img-wrap"> <img src="{{ image }}" width="30px"> </a>
+                    <figcaption class="info-wrap">
+                        <a href="#" class="title">{{ modelName }}</a>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: ${{ price }}</li>
+                        </ul>
+                    </figcaption>
+                </div>
+            {{/each}}
+        </div> <!-- container .//  -->
+    </div>
+</section>
+
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+{{!-- <section class="section-name bg padding-y-sm">
+    <div class="container">
+        <header class="section-heading">
+            <h3 class="section-title">Our Brands</h3>
+        </header><!-- sect-heading -->
+        <div class="row">
+            <div class="col-md-2 col-6">
+                <figure class="box item-logo">
+                    <a href="#"><img src="assets/images/logos/MSI-Logo.png"></a>
+                </figure> <!-- item-logo.// -->
+            </div> <!-- col.// -->
+            <div class="col-md-2  col-6">
+                <figure class="box item-logo">
+                    <a href="#"><img src="assets/images/logos/asus-logo.jpg"></a>
+                </figure> <!-- item-logo.// -->
+            </div> <!-- col.// -->
+            <div class="col-md-2  col-6">
+                <figure class="box item-logo">
+                    <a href="#"><img src="assets/images/logos/apple.png"></a>
+                </figure> <!-- item-logo.// -->
+            </div> <!-- col.// -->
+            <div class="col-md-2  col-6">
+                <figure class="box item-logo">
+                    <a href="#"><img src="assets/images/logos/logo4.png"></a>
+                </figure> <!-- item-logo.// -->
+            </div> <!-- col.// -->
+            <div class="col-md-2  col-6">
+                <figure class="box item-logo">
+                    <a href="#"><img src="assets/images/dell.png"></a>
+                </figure> <!-- item-logo.// -->
+            </div> <!-- col.// -->
+            <div class="col-md-2  col-6">
+                <figure class="box item-logo">
+                    <a href="#"><img src="assets/images/samsung2.png"></a>
+                </figure> <!-- item-logo.// -->
+            </div> <!-- col.// -->
+        </div> <!-- row.// -->
+    </div><!-- container // -->
+</section> --}}

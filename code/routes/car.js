@@ -7,6 +7,7 @@ router.get("/", async (req, res) => {
   res.render("toy/car/index", { car: car });
 });
 
+
 router.get("/add", (req, res) => {
   res.render("toy/car/add");
 });

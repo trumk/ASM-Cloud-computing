@@ -1,4 +1,5 @@
 var express = require('express');
+const CarModel = require('../models/CarModel');
 var router = express.Router();
 
 /* GET home page. */
