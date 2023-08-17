@@ -34,9 +34,9 @@ router.get("/detail/:id", async (req, res) => {
     var total = price * quantity
   
     if (car) {
-      res.render("toy/car/order", { car: car, price:price, total:total});
+      res.render("toy/car/order", { car: car, quantity:quantity, price:price, total:total});
     } else if (lego) {
-      res.render("toy/lego/order", { lego: lego, price:price, total:total});
+      res.render("toy/lego/order", { lego: lego, quantity:quantity, price:price, total:total});
     } 
   });
 
