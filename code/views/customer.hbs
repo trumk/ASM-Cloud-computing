@@ -48,7 +48,15 @@
         <header class="section-heading">
             <h3 class="section-title">Popular products</h3>
         </header><!-- sect-heading -->
-
+        <form action="/customer/search" method="post">
+        <input
+          class="form-control mt-3"
+          type="search"
+          name="keyword"
+          placeholder="Enter product name or brand"
+          required
+        />  
+      </form>
         <div class="row">
             {{#each lego }}
                 <div class="card card-product-grid">
@@ -75,46 +83,3 @@
         </div> <!-- container .//  -->
     </div>
 </section>
-
-<!-- ========================= SECTION CONTENT END// ========================= -->
-
-<!-- ========================= SECTION  ========================= -->
-{{!-- <section class="section-name bg padding-y-sm">
-    <div class="container">
-        <header class="section-heading">
-            <h3 class="section-title">Our Brands</h3>
-        </header><!-- sect-heading -->
-        <div class="row">
-            <div class="col-md-2 col-6">
-                <figure class="box item-logo">
-                    <a href="#"><img src="assets/images/logos/MSI-Logo.png"></a>
-                </figure> <!-- item-logo.// -->
-            </div> <!-- col.// -->
-            <div class="col-md-2  col-6">
-                <figure class="box item-logo">
-                    <a href="#"><img src="assets/images/logos/asus-logo.jpg"></a>
-                </figure> <!-- item-logo.// -->
-            </div> <!-- col.// -->
-            <div class="col-md-2  col-6">
-                <figure class="box item-logo">
-                    <a href="#"><img src="assets/images/logos/apple.png"></a>
-                </figure> <!-- item-logo.// -->
-            </div> <!-- col.// -->
-            <div class="col-md-2  col-6">
-                <figure class="box item-logo">
-                    <a href="#"><img src="assets/images/logos/logo4.png"></a>
-                </figure> <!-- item-logo.// -->
-            </div> <!-- col.// -->
-            <div class="col-md-2  col-6">
-                <figure class="box item-logo">
-                    <a href="#"><img src="assets/images/dell.png"></a>
-                </figure> <!-- item-logo.// -->
-            </div> <!-- col.// -->
-            <div class="col-md-2  col-6">
-                <figure class="box item-logo">
-                    <a href="#"><img src="assets/images/samsung2.png"></a>
-                </figure> <!-- item-logo.// -->
-            </div> <!-- col.// -->
-        </div> <!-- row.// -->
-    </div><!-- container // -->
-</section> --}}

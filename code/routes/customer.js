@@ -40,4 +40,28 @@ router.get("/detail/:id", async (req, res) => {
     } 
   });
 
+  router.post('/search', async (req, res) => {
+    var keyword = req.body.keyword;
+  
+    try {
+      var car = await CarModel.find({
+        $or: [
+          { brandName: new RegExp(keyword, 'i') },
+          { modelName: new RegExp(keyword, 'i') }
+        ]
+      });
+  
+      var lego = await LegoModel.find({
+        $or: [
+          { brandName: new RegExp(keyword, 'i') },
+          { modelName: new RegExp(keyword, 'i') }
+        ]
+      });
+  
+      res.render('customer', { car: car, lego: lego }); 
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
 module.exports = router;
