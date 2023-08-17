@@ -15,7 +15,7 @@
       <h5>Model: {{car.modelName}}</h5>
       <h5>Price: ${{car.price}}</h5>
       <h5>Description: <br>{{car.description}}</h5>
-      <form action="/laptop/order" method="post">
+      <form action="/customer/order" method="post">
       <input
           type="number"
           name="quantity"
@@ -23,8 +23,8 @@
           max="10"
           value="1"
         />
-        <input type="hidden" name="id" value="{{ laptop._id }}">
-        <input type="hidden" name="price" value="{{ laptop.price }}">
+        <input type="hidden" name="id" value="{{ car._id }}">
+        <input type="hidden" name="price" value="{{ car.price }}">
         <input type="submit" class="btn btn-primary" value="Order" />
       </form>
     </div>

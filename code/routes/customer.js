@@ -20,9 +20,24 @@ router.get("/detail/:id", async (req, res) => {
     } else if (lego) {
       res.render("toy/lego/detail", { lego: lego });
     } else {
-      // Handle the case when neither a car nor a lego with the provided ID is found
       res.status(404).send("Product not found");
     }
+  });
+
+  router.post("/order", async (req, res) => {
+    var data = req.body
+    var id = data.id
+    var car = await CarModel.findById(id);
+    var lego = await LegoModel.findById(id);
+    var price = data.price
+    var quantity = data.quantity
+    var total = price * quantity
+  
+    if (car) {
+      res.render("toy/car/order", { car: car, price:price, total:total});
+    } else if (lego) {
+      res.render("toy/lego/order", { lego: lego, price:price, total:total});
+    } 
   });
 
 module.exports = router;
