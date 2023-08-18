@@ -1,39 +1,65 @@
 body {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding-top: 20px;
+  overflow-y: auto; /* Add scrolling behavior */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+body > div.sidebar > a {
+  font-size: 25px;
+}
+
+body > div.sidebar > a:hover {
+  background-color: aqua;
+}
+
+body > div.sidebar > img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 30px;
+}
+  .container {
     display: flex;
-  }
-
-  .sidebar {
-    width: 250px;
-    background-color: #333;
-    color: white;
-    padding-top: 20px;
-    height: 100vh;
-  }
-
-  .content {
-    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
   }
-
-  .sidebar-link {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    border: 1px solid #000000; 
-    border-radius: 5px; 
+  .card {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-  body > div.sidebar > a{
-    font-size: 25px;
+  .card img {
+    max-width: 100%;
+    height: auto;
   }
-  body > div.sidebar > a:hover{
-    background-color: aqua;
+  .card h3 {
+    margin: 10px 0;
   }
-  body > div.sidebar > img{
-    width: 170px;
-    height: 170px;
-    border-radius: 50%; 
-    object-fit: cover;
-    margin-left: 30px;
+  .card p {
+    color: #555;
   }
