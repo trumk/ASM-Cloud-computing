@@ -4,7 +4,10 @@
             <h1 class="text text-danger">Add Product</h1>
             <div class="form-group">
                 <label class="h4 text text-success">Brand name</label>
-                <input class="form-control" type="text" name="brandName" required>
+                <select name="brandName" class="form-control">
+                    <option value="LEGO">LEGO</option>
+                    <option value="LEGO">CAR</option>
+                </select>
             </div>
             <div class="form-group">
                 <label class="h4 text text-success">Model name</label>
@@ -25,6 +28,11 @@
             <div class="form-group">
                 <label class="h4 text text-success">Image url</label>
                 <input class="form-control" type="text" name="image" required>
+            </div>
+            <div class="form-group">
+                <label class="h4 text text-success">Color</label>
+                RED<input type="radio" name="color" id="" value="RED">
+                BLUE<input type="radio" name="color" id="" value="BLUE">
             </div>
             <div class="form-group">
                 <input class="btn btn-primary" type="submit" value="Add">
